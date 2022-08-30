@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Модуль 5. Поцизійовані елементи. Переходи й анімація</title>
+  </head>
+  <body>
+    <a href="./index.html">Меню</a>
+    <h1>Модуль 5. Поцизійовані елементи. Переходи й анімація. Частина 2</h1>
+    <p>Завдання 1</p>
+    <pre><code>
+        .container {
+            width: 480px;
+            height: 240px;
+            margin: 16px auto;
+            background:
+            /* верхній фон */
+            linear-gradient(26.3deg,
+            /* чорний з прозорістю .2 */
+                hsla(0, 0%, 0%, .2),
+                hsla(0, 0%, 0%, .2) 50%,
+                transparent 50%,
+                transparent),
+                /* нижній фон */
+            linear-gradient(153.3deg,
+                teal,
+                teal 50%,
+                slategray 50%,
+                slategray);
+            position: relative;
+        }
+
+        .box {
+            --size: 50px;
+            width: var(--size);
+            height: var(--size);
+            background-color: orange;
+            display: flex;
+            /* Напиши код під цим рядком */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*
+        центруємо елемент при
+        батькові під flex
+        */
+        span {
+            margin: auto;
+        }
+    </code></pre>
+    <p>Завдання 2</p>
+    <pre><code>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .box {
+            display: inline-block;
+            --r: 90px;
+            width: var(--r);
+            height: var(--r);
+            border-radius: 50%;
+            background: crimson;
+            cursor: pointer;
+            /* Зміни код під цим рядком */
+            transition: .8s all ease;
+        }
+
+        .box:hover {
+            border-radius: 0;
+            background: slateblue;
+        }
+    </code></pre>
+    <p>Завдання 3</p>
+    <pre><code>
+        .text {
+            position: relative;
+            text-align: center;
+            padding: 1rem;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            color: #f38181;
+        }
+        .effect {
+          position: relative;
+        }
+        .effect::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            position: absolute;
+            bottom: -4px;
+            right: 0;
+            background: #f38181;
+            transition: width 0.5s, left 0.5s;
+        }
+
+        .effect:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </code></pre>
+    <p>Завдання 4</p>
+    <pre><code>
+        .container {
+            max-width: 480px;
+            min-height: 100vh;
+            margin: auto;
+            padding: 1rem;
+            box-shadow: 2px 2px 6px 3px hsla(0, 0%, 0%, .2);
+        }
+        .row {
+            margin-bottom: 1rem;
+            min-height: 60px;
+        }
+        .row:nth-of-type(2n) {
+           background-color: crimson;
+        }
+        .row:nth-of-type(2n + 1) {
+            background-color: slateblue;
+        }
+
+
+        @keyframes fadeInFromLeft {
+            0% {
+                transform: translateX(-2000px) scale(0.6);
+                opacity: 0.7;
+            }
+            80% {
+                transform: translateX(50px) scale(0.7);
+                opacity: 0.7;
+            }
+            to {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInFromRight {
+            0% {
+                transform: translateX(2000px) scale(0.6);
+                opacity: 0.7;
+            }
+            80% {
+                transform: translateX(-50px) scale(0.7);
+                opacity: 0.7;
+            }
+            to {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .fadeInFromLeft,
+        .fadeInFromRight  {
+            animation-duration: 1000ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in-out;
+            animation-delay: 500ms;
+        }
+        .fadeInFromLeft {
+            animation-name: fadeInFromLeft;
+        }
+        .fadeInFromRight {
+            animation-name: fadeInFromRight;
+        }
+    </code></pre>
+    <p>Завдання 5</p>
+    <pre><code>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        @keyframes  cursorMoveOut {
+            from {
+                border-radius: 50%;
+                background: crimson;
+            }
+            to {
+                border-radius: 0;
+                background: slateblue;
+            }
+        }
+        @keyframes cursorMoveIn {
+            from {
+                border-radius: 0;
+                background: slateblue;
+            }
+            to {
+                border-radius: 50%;
+                background: crimson;
+            }
+        }
+
+        .box {
+            display: inline-block;
+            --r: 90px;
+            width: var(--r);
+            height: var(--r);
+            border-radius: 50%;
+            background: crimson;
+            cursor: pointer;
+            /* Напиши код під цим рядком */
+            animation: cursorMoveIn 0.8s forwards;
+        }
+
+        .box:hover {
+           animation: cursorMoveOut 0.8s forwards;
+        }
+    </code></pre>
+
+    <a href="./module5task1.html">Назад</a>
+    <a href="./module6task1.html">Далі</a>
+  </body>
+</html>

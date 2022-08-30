@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Модуль 5. Поцизійовані елементи. Переходи й анімація</title>
+  </head>
+  <body>
+    <a href="./index.html">Меню</a>
+    <h1>Модуль 5. Поцизійовані елементи. Переходи й анімація. Частина 1</h1>
+    <p>Завдання 1</p>
+    <pre><code>
+        .container {
+            width: 480px;
+            height: 240px;
+            margin: 1rem auto;
+            background: 
+            /* верхній фон */
+            linear-gradient(26.3deg, 
+            /* чорний з прозорістю .2 */
+                hsla(0, 0%, 0%, .2), 
+                hsla(0, 0%, 0%, .2) 50%, 
+                transparent 50%, 
+                transparent),
+                /* нижній фон */
+            linear-gradient(153.3deg,
+                teal, 
+                teal 50%, 
+                slategray 50%, 
+                slategray);
+            position: relative;
+        }
+
+        .box {
+            --size: 50px;
+            width: var(--size);
+            height: var(--size);
+            background-color: orange;
+            display: flex;
+            /* Напиши код під цим рядком */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        /*
+        центруємо елемент при
+        батькові під flex
+        */
+        span {
+            margin: auto;
+        }
+    </code></pre>
+    <p>Завдання 2</p>
+    <pre><code>
+        body {
+           font-family: sans-serif;
+        }
+        h2 {
+            text-align: center;
+        }
+        .container-fluid {
+            display: flex;
+            justify-content: space-between;
+        }
+        .container {
+            width: 350px;
+            margin: .5rem auto;
+            padding: .75rem .5rem .25rem;
+            border-radius: 1rem;
+            background-color: teal;
+
+        /* видаляємо пробіли між inline-block */
+            font-size: 0;
+        }
+        .box {
+            display: inline-block;
+            width: 100px;
+            margin: 0 .5rem .5rem;
+            border-radius: .5rem;
+            color: #fff;
+            background-color: orange;
+
+        /* Напиши код під цим рядком */
+            font-size: 18px;
+        
+        /* центруємо текст */
+            --h: 2rem;
+            height: var(--h);
+            line-height: var(--h);
+            text-align: center;
+        }
+
+        /* Напиши код під цим рядком */
+        .by-position {
+            background-color: palevioletred;
+            position: relative;
+            top: 2rem;
+            left: 2rem;
+        }
+        .by-margin {
+            background-color: lightskyblue;
+            margin-top: 2rem;
+            margin-left: 2rem;
+        }
+    </code></pre>
+    <p>Завдання 3</p>
+    <pre><code>
+        body {
+           font-family: sans-serif;
+        }
+        h2 {
+            text-align: center;
+        }
+        .container-fluid {
+            display: flex;
+            justify-content: space-between;
+        }
+        .container {
+            width: 350px;
+            margin: .5rem auto;
+            padding: .75rem .5rem .25rem;
+            border-radius: 1rem;
+            background-color: teal;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 100px;
+            margin: 0 .5rem .5rem;
+            border-radius: .5rem;
+            color: #fff;
+            background-color: orange;
+            font-size: 18px;
+            
+            /* центруємо текст */
+            --h: 2rem;
+            height: var(--h);
+            line-height: var(--h);
+            text-align: center;
+        }
+
+        .by-position {
+            background-color: palevioletred;
+            position: relative;
+            top: 2rem;
+            left: 2rem;
+            right: 2rem;
+            bottom: 2rem;
+        }
+        .by-margin {
+            background-color: lightskyblue;
+            margin: 2rem;
+        }
+    </code></pre>
+    <p>Завдання 4</p>
+    <pre><code>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            text-align: center;
+            font-size: 24px;
+            font-family: sans-serif;
+            background: linear-gradient(hsl(189, 100%, 85%), hsl(224, 75%, 25%));
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            height: 6rem;
+            padding: 1rem;
+            background: hsl(189, 100%, 96%);
+        }
+        main {
+            padding-top: 6rem;
+        }
+        footer {
+            padding: 1rem;
+            background: hsl(224, 45%, 10%);
+            color: #fff;
+        }
+        ul {
+            list-style: none;
+            padding: 1rem;
+        }
+    </code></pre>
+    <p>Завдання 5</p>
+    <pre><code>
+        body {
+            height: 200vh;
+            background: linear-gradient(hsl(189, 100%, 85%), hsl(224, 75%, 25%));
+            text-align: center;
+        }
+
+        .box {
+            padding: 2rem 1rem;
+            box-sizing: border-box;
+            width: 360px;
+            height: 200px;
+            background-color: #fff;
+            cursor: initial;
+            /* Додай властивість під цим рядком */
+            margin: auto;
+        }
+
+        .btn,
+        .box {
+            cursor: pointer;
+        }
+
+        .modal {
+            cursor: not-allowed;
+            /* Зміни код під цим рядком */
+            display: flex;
+            background-color: hsla(0, 0%, 0%, .5);
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;   
+        }
+    </code></pre>
+    <p>Завдання 6</p>
+    <pre><code>
+        .container {
+            padding-top: 40px;
+            width: 480px;
+            margin: auto;
+        }
+
+        header {
+            display: flex;
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #fff;
+            box-shadow: 2px 2px 6px 3px hsla(0, 0%, 0%, .2);
+
+            /* Нерухомий header */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            z-index: 20;
+        }
+
+        h1 {
+           margin: auto;
+        }
+
+        .letter {
+            height: 2rem;
+            margin-left: 10rem;
+            margin-right: 10rem;
+            border-radius: 3px;
+            list-style-type: none;
+            line-height: 2rem;
+            text-align: center;
+            color: #d00;
+            background: navajowhite;
+            /* Напиши код під цим рядком */
+            position: sticky;
+            top: 40px;
+        }
+    </code></pre>
+    <p>Завдання 7</p>
+    <pre><code>
+        :root {
+           --s: 1.5rem;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding-top: 1rem;
+        }
+        .container-outer {
+            margin: 1rem 0 0;
+            padding: .5rem 0;
+            width: 75%;
+            background-color: mediumseagreen;
+        }
+        .container {
+            background-color: slateblue;
+            padding: .5rem 0;
+            width: 50%;
+            height: var(--s);
+        }
+        .psr {
+            position: relative;
+        }
+        .box {
+            border-radius: 2rem;
+            height: var(--s);
+            line-height: var(--s);
+            background-color: crimson;
+            text-align: center;
+            position: absolute;
+            /* Напиши код під цим рядком */
+            top: 0;
+            width: 100%;
+        }
+    </code></pre>
+    <p>Завдання 8</p>
+    <pre><code>
+        .box {
+            display: flex;
+            --s: 60px;
+            width: var(--s);
+            height: var(--s);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .inner {
+            margin: auto;
+            --s: 30px;
+            width: var(--s);
+            height: var(--s);
+            border-radius: 50%;
+            background-color: orange;
+            z-index: 100;
+        }
+        .alfa {
+            background-color: crimson;
+            top:30px;
+            left: 5px;
+            z-index: 30;
+        }
+        .beta {
+            background-color: slateblue;
+            left: 25px;
+            z-index: 20;
+        }
+        .gamma {
+            top:30px;
+            left: 45px;
+            background-color: mediumseagreen;
+            z-index: 10;
+        }
+    </code></pre>
+
+    <a href="./module4task2.html">Назад</a>
+    <a href="./module5task2.html">Далі</a>
+  </body>
+</html>

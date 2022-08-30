@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Модуль 4. Декоративні ефекти і елементи. Векторна графіка</title>
+  </head>
+  <body>
+    <a href="./index.html">Меню</a>
+    <h1>
+      Модуль 4. Декоративні ефекти і елементи. Векторна графіка. Частина 2
+    </h1>
+    <p>Завдання 1</p>
+    <pre><code>
+        div {
+            color: green;
+            background-color: #eee;
+            font-size: 24px;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            fill: currentColor;
+        }
+
+        div:hover {
+            color: orangered;
+        }
+    </code></pre>
+    <p>Завдання 2</p>
+    <pre><code>
+        .comment {
+            text-decoration: none;
+            color: green;
+            font-family: sans-serif;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        .comment-icon {
+           margin-right: 0.5rem;
+            --icon-color: currentColor;
+        }
+        .comment:hover {
+            color: orangered;
+        }
+    </code></pre>
+    <p>Завдання 3</p>
+    <pre><code>
+        :root {
+            --primary: burlywood;
+            --accent: cadetblue;
+        }
+        .items {
+            list-style: none;
+            display: flex;
+        }
+        .item {
+            margin: 0.25rem;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 50%;
+            color: var(--accent);
+            background-color: var(--primary);
+        }
+        .icon {
+            --icon-color: currentColor;
+        }
+        .item:hover {
+            color: var(--primary);
+            background-color: var(--accent);
+        }
+    </code></pre>
+
+    <a href="./module4task1.html">Назад</a>
+    <a href="./module5task1.html">Далі</a>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Модуль 3. Блокова модель. Flexbox</title>
+  </head>
+  <body>
+    <a href="./index.html">Меню</a>
+    <h1>Модуль 3. Блокова модель. Flexbox. Частина 2</h1>
+    <p>Завдання 1</p>
+    <pre><code>
+        body {
+            font-size: 20px;
+        }
+
+        /* 
+        2 * 15 - це розмір, 
+        який box-sizing: border-box 
+        відібрав у width і height
+
+        ширина container 480  - (2 * 15)
+        або 3 рази по 160 - (2 * 15)  
+        */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 480px;
+            margin: auto;
+            padding: 15px;
+            background: burlywood;
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 130px;
+            min-height: 75px;
+            background-color: teal;
+            color: #fff;
+        }
+    </code></pre>
+    <p>Завдання 2</p>
+    <pre><code>
+        body {
+           font-size: 20px;
+        }
+
+        /* 
+        ширина container 480 
+        або 3 рази по 160   
+        */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 480px;
+            margin: auto;
+            padding: 15px 0;
+            background: burlywood;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .box {
+            width: 130px;
+            min-height: 75px;
+            background-color: teal;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </code></pre>
+    <p>Завдання 3</p>
+    <pre><code>
+        body {
+           font-size: 20px;
+        }
+
+        .container {
+            width: 480px;
+            margin: auto;
+            padding: 15px 15px 0;
+            background: burlywood;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .box {
+            width: 130px;
+            min-height: 75px;
+            background-color: teal;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+    </code></pre>
+    <p>Завдання 4</p>
+    <pre><code>
+        a {
+           text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 480px;
+            padding: 15px;
+            margin: auto;
+            background: burlywood;
+            box-sizing: border-box;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu_link {
+            margin: 0 15px;
+        }
+    </code></pre>
+    <p>Завдання 5</p>
+    <pre><code>
+        body {
+            font-size: 20px;
+        }
+
+        /* 
+        ширина container 480 
+        або 3 рази по 160   
+        */
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 15px 0;
+            background: burlywood;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box {
+            width: 130px;
+            min-height: 75px;
+            background-color: teal;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 15px
+        }
+
+        .box-left {
+            margin-right: auto;
+        }
+    </code></pre>
+
+    <a href="./module3task1.html">Назад</a>
+    <a href="./module4task1.html">Далі</a>
+  </body>
+</html>

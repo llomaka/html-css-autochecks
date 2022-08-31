@@ -11,43 +11,217 @@
     <h1>Модуль 7. Методологія BEM. Препроцесор SASS. Частина 2</h1>
     <p>Завдання 1</p>
     <pre><code>
-        
+        /* palette */
+        $blue: #6610f2;
+        $lightBlue: #007bff;
+        $white: #fff;
+
+        .btn {
+          padding: .25rem 1.75rem;
+          color: $white;
+          background-color: $lightBlue;
+          border: $blue;
+          cursor: pointer;
+        }
+
+        .btn:hover,
+        .btn:focus {
+          background-color: $blue;
+        }
     </code></pre>
     <p>Завдання 2</p>
     <pre><code>
+      /* palette */
+      $blue: #6610f2;
+      $lightBlue: #007bff;
+      $white: #fff;
 
+      .up {
+        display: flex;
+        justify-content: center;
+        align-items:  center;
+        color: $white;
+        background-color: $lightBlue;
+        border: #6610f2;
+        cursor: pointer;
+        border-radius: 50%;
+      /* Зміни код під цим рядком */
+          $diameter: 80px;
+        width: $diameter;
+        height: $diameter;
+      }
+
+      .up:hover,
+      .up:focus {
+        background-color: $blue;
+      }
     </code></pre>
     <p>Завдання 3</p>
     <pre><code>
+      /* palette */
+      $blue: #6610f2;
+      $lightBlue: #007bff;
+      $white: #fff;
 
+      .circle {
+        $diameter: 80px;
+        width: $diameter;
+        height: $diameter;
+        border-radius: 50%;
+      }
+
+      .up {
+        display: flex;
+        justify-content: center;
+        align-items:  center;
+        color: $white;
+        background-color: $lightBlue;
+        border: #6610f2;
+        cursor: pointer;
+      /* Додай код під цим рядком */
+          @extend .circle;
+      }
+
+      .up:hover,
+      .up:focus {
+        background-color: $blue;
+      }
     </code></pre>
     <p>Завдання 4</p>
     <pre><code>
+      /* palette */
+      $blue: #6610f2;
+      $lightBlue: #007bff;
+      $white: #fff;
 
+      /* Зміни код під цим рядком */
+      %circle {
+        $diameter: 80px;
+        width: $diameter;
+        height: $diameter;
+        border-radius: 50%;
+      }
+
+      .up {
+        display: flex;
+        justify-content: center;
+        align-items:  center;
+        color: $white;
+        background-color: $lightBlue;
+        border: #6610f2;
+        cursor: pointer;
+      /* Додай код під цим рядком */
+          @extend %circle;
+      }
+
+      .up:hover,
+      .up:focus {
+        background-color: $blue;
+      }
     </code></pre>
     <p>Завдання 5</p>
     <pre><code>
+      /* palette */
+      $blue: #6610f2;
+      $lightBlue: #007bff;
+      $white: #fff;
 
+      /* Зміни код під цим рядком */
+      @mixin circle($diameter) {
+        width: $diameter;
+        height: $diameter;
+        border-radius: 50%;
+      }
+
+      .up {
+        display: flex;
+        justify-content: center;
+        align-items:  center;
+        color: $white;
+        background-color: $lightBlue;
+        border: #6610f2;
+        cursor: pointer;
+      /* Зміни код під цим рядком */
+        @include circle(100px);
+      }
+
+      .up:hover,
+      .up:focus {
+        background-color: $blue;
+      }
     </code></pre>
     <p>Завдання 6</p>
     <pre><code>
-
+      label {
+          & span {
+              color: #888;
+          }
+          &:focus-within {
+              & span {
+                color: green;        
+              }
+          }
+      }
     </code></pre>
     <p>Завдання 7</p>
     <pre><code>
-
+      label {
+          & span {
+              color: #888;
+          }
+          &:focus-within {
+              & span {
+                  color: green;
+              }
+          }
+      }
     </code></pre>
     <p>Завдання 8</p>
     <pre><code>
+      body {
+        text-align: center;
+      }
 
+      $rgb: (
+        'red': #f00,
+        'green': #080,
+        'blue': #00f,
+      );
+
+      label[for="id-red"] {
+          color: map-get($rgb, 'red');
+      }
+
+      label[for="id-green"] {
+          color: map-get($rgb, 'green');
+      }
+
+      label[for="id-blue"] {
+          color: map-get($rgb, 'blue');
+      }
     </code></pre>
     <p>Завдання 9</p>
     <pre><code>
+      @mixin center ($width, $height) {
+        position: absolute;
+        width: $width;
+        height: $height;
+        top: 50%;
+        left: 50%;
+          margin-top: $height / -2;
+          margin-left: $width / -2;
+      }
 
+      .box {
+        background: gold;
+        @include center(100px, 50px);
+      }
     </code></pre>
     <p>Завдання 10</p>
     <pre><code>
-
+      @import 'normalizer';
+      @import 'variables';
+      @import 'header';
     </code></pre>
 
     <a href="./module7task1.html">Назад</a>

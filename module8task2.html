@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Модуль 8. Адаптивна верстка. Адаптивна графіка</title>
+  </head>
+  <body>
+    <a href="./index.html">Меню</a>
+    <h1>Модуль 8. Адаптивна верстка. Адаптивна графіка. Частина 2</h1>
+    <p>Завдання 1</p>
+    <pre><code>
+        /* 1x - значення за замовчуванням, зображення 360x220 */
+        .card {
+            width: 324px;
+            height: 198px;
+            margin: 1rem auto;
+            box-shadow: 20px 10px 20px hsla(0, 0%, 0%, 0.5);
+            background-image: url('https://ac.goit.global/img/bg@1x.jpg'),
+                linear-gradient(#eee, #888);
+            background-size: cover;
+        }
+
+        /* 2x-екрани, зображення 720x440 */
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            .card {
+                background-image: url('https://ac.goit.global/img/bg@2x.jpg'),
+                linear-gradient(#eee, #888);
+            }
+        }
+
+        /* 3x-екрани, зображення 1080x660 */
+        @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+            .card {
+                background-image: url('https://ac.goit.global/img/bg@3x.jpg'),
+                linear-gradient(#eee, #888);
+            }
+        }
+    </code></pre>
+    <p>Завдання 2</p>
+    <pre><code>
+        &lt;img
+            src="https://ac.goit.global/img/source@1x.jpg"
+            alt="Image description for all versions"
+            srcset="https://ac.goit.global/img/source@1.5x.jpg 1.5x,
+                https://ac.goit.global/img/source@2x.jpg 2x,
+                https://ac.goit.global/img/source@3x.jpg 3x"
+        />
+    </code></pre>
+    <p>Завдання 3</p>
+    <pre><code>
+        &lt;img
+            alt="Image description for all versions"
+            src="https://ac.goit.global/img/source.jpg"
+            srcset="https://ac.goit.global/img/source-360.jpg 360w,
+                https://ac.goit.global/img/source-540.jpg 540w,
+                https://ac.goit.global/img/source-720.jpg 720w,
+                https://ac.goit.global/img/source-1080.jpg 1080w,
+                https://ac.goit.global/img/source-1440.jpg 1440w"
+        />
+    </code></pre>
+    <p>Завдання 4</p>
+    <pre><code>
+        &lt;figure class="image-wrapper">
+        &lt;img
+            class="image"
+            alt="Image description for all versions"
+            src="https://ac.goit.global/img/source.jpg"
+            srcset="https://ac.goit.global/img/source-360.jpg 360w,
+            https://ac.goit.global/img/source-540.jpg 540w,
+            https://ac.goit.global/img/source-720.jpg 720w,
+            https://ac.goit.global/img/source-1080.jpg 1080w,
+            https://ac.goit.global/img/source-1440.jpg 1440w"
+            sizes="(max-width: 549px) calc(100vw - 10px),
+                (max-width: 959px) calc(50vw - 20px),
+                (min-width: 960px) calc(70vw - 20px)"
+        />
+        &lt;figcaption class="image-description">
+            Detailed description of the image.
+        &lt;/figcaption>
+        &lt;/figure>
+    </code></pre>
+    <p>Завдання 5</p>
+    <pre><code>
+        &lt;picture>
+            &lt;source
+                media="screen and (orientation: portrait) and (max-width: 549px)"
+                srcset="https://ac.goit.global/img/source-vertical.jpg,
+                https://ac.goit.global/img/source-vertical_2x.jpg 2x"
+            />
+            &lt;source 
+                media="screen and (min-width: 550px)" 
+                srcset="https://ac.goit.global/img/source-horizontal.jpg,
+                https://ac.goit.global/img/source-horizontal_2x.jpg 2x" />
+            &lt;source
+                media="screen and (orientation: landscape)"
+                srcset="https://ac.goit.global/img/source-horizontal.jpg,
+                https://ac.goit.global/img/source-horizontal_2x.jpg 2x"
+            />
+            &lt;img
+                src="https://ac.goit.global/img/source.jpg"
+                alt="Image text description"
+            />
+        &lt;/picture>
+    </code></pre>
+
+    <a href="./module8task1.html">Назад</a>
+  </body>
+</html>

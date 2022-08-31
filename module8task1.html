@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Модуль 8. Адаптивна верстка. Адаптивна графіка</title>
+  </head>
+  <body>
+    <a href="./index.html">Меню</a>
+    <h1>Модуль 8. Адаптивна верстка. Адаптивна графіка. Частина 1</h1>
+    <p>Завдання 1</p>
+    <pre><code>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 2vmax 2vmin;
+            font-size: calc(.8rem + 2vmax);
+            background: slateblue;
+            color: #fff;
+        }
+    </code></pre>
+    <p>Завдання 2</p>
+    <pre><code>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .full-width {
+            width: 100vw;
+            height: calc(100vw * 9 / 21);
+        }
+    </code></pre>
+    <p>Завдання 3</p>
+    <pre><code>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: teal;
+        }
+        @media screen and (min-width: 550px) {
+            body {
+                background-color: slateblue;
+            }
+        }
+        @media screen and (min-width: 960px) {
+            body {
+                background-color: coral;   
+            }
+        }
+    </code></pre>
+    <p>Завдання 4</p>
+    <pre><code>
+        .container-fluid {
+            padding: 1rem 0;
+            background-color: teal;
+        }
+        .container {
+            min-height: 100px;
+            width: 320px;
+            margin: auto;
+            background-color: antiquewhite;
+        }
+        @media screen and (min-width: 550px) {
+            .container-fluid {
+                background-color: slateblue;
+            }
+            .container {
+                width: calc(550px - 20px);
+                background-color: lavender;
+            }
+        }
+
+        @media screen and (min-width: 960px) {
+            .container {
+                width: calc(960px - 20px);
+                background-color: beige;
+            }
+        }
+    </code></pre>
+    <p>Завдання 5</p>
+    <pre><code>
+        .container-fluid {
+            padding: 1rem 0;
+            background-color: teal;
+        }
+        .container {
+            min-height: 100px;
+            width: 90%;
+            margin: auto;
+            background-color: antiquewhite;
+        }
+        @media screen and (min-width: 550px) {
+            .container-fluid {
+                background-color: slateblue;
+            }
+            .container {
+                max-width: 550px;
+                background-color: lavender;
+            }
+        }
+        @media screen and (min-width: 960px) {
+            .container {
+                max-width: 960px;
+                background-color: beige;
+            }
+        }
+    </code></pre>
+    <p>Завдання 6</p>
+    <pre><code>
+        body {
+            background-color: crimson;
+        }
+
+        @media screen and (min-width: 360px) {
+            body {
+                background-color: slateblue;
+            }
+        }
+
+        @media screen and (min-width: 580px) {
+            body {
+                background-color: moccasin;
+            }
+        }
+    </code></pre>
+    <p>Завдання 7</p>
+    <pre><code>
+        :root {
+            --tablet: calc(100% / 2 - 2 * 15px);
+            --desktop: calc(100% / 4 - 2 * 15px);
+        }
+        .container-fluid {
+            min-height: 100px;
+            padding: 1rem 0;
+            background-color: darkseagreen;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 30px 0 15px;
+            background-color: aliceblue;
+        }
+        .card {
+            max-width: calc(90% - 2 * 15px);
+            min-width: 280px;
+            height: 50px;
+            margin: 0 auto 15px;
+            background-color: green;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+        @media screen and (min-width: 360px)  {
+            .container {
+                display: flex;
+                justify-content: space-center;
+                padding-left: 15px;
+                padding-right: 15px;
+                flex-wrap: wrap;
+            }
+            .card {
+                margin: 0 15px 15px;
+            /* Напиши код під цим рядком */
+                min-width: var(--tablet);
+            }
+        }
+        @media screen and (min-width: 580px) {
+            .card {
+            /* Напиши код під цим рядком */
+                min-width: var(--desktop);
+            }
+        }
+    </code></pre>
+
+    <a href="./module7task2.html">Назад</a>
+    <a href="./module8task2.html">Далі</a>
+  </body>
+</html>

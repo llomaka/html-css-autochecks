@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Модуль 6. Розмітка форм. Стилізація форм</title>
+  </head>
+  <body>
+    <a href="./index.html">Меню</a>
+    <h1>Модуль 6. Розмітка форм. Стилізація форм. Частина 1</h1>
+    <p>Завдання 1</p>
+    <pre><code>
+        &lt;input type="text" name="login" placeholder="Enter login:" />
+    </code></pre>
+    <p>Завдання 2</p>
+    <pre><code>
+        &lt;label>
+            &lt;span>Login&lt;/span>
+            &lt;input type="text" name="login" placeholder=" " />
+        &lt;/label>
+    </code></pre>
+    <p>Завдання 3</p>
+    <pre><code>
+        &lt;form autocomplete="off" method="POST" action="javascript:void(0);">
+            &lt;label>
+                &lt;span>Login&lt;/span>
+                &lt;input type="text" name="login" placeholder=" " />
+            &lt;/label>
+            &lt;label>
+                &lt;span>Password&lt;/span>
+                &lt;input type="password" name="password" placeholder=" " />
+            &lt;/label>
+            &lt;button type="submit">Submit&lt;/button>
+        &lt;/form>
+    </code></pre>
+    <p>Завдання 4</p>
+    <pre><code>
+        &lt;form autocomplete="off" method="POST" action="javascript:void(0);">
+            &lt;label for="id-comment">Comment&lt;/label>
+            &lt;textarea id="id-comment" name="comment" placeholder="Share your opinion:">&lt;/textarea>
+            &lt;button type="submit">Submit&lt;/button>
+            &lt;button type="reset">Reset&lt;/button>
+        &lt;/form>
+    </code></pre>
+    <p>Завдання 5</p>
+    <pre><code>
+        &lt;div class="container">
+            &lt;section>
+                &lt;h4>Choose only one value&lt;/h4>
+                &lt;form action="javascript:void(0);" id="id-radio">
+                    &lt;div>
+                        &lt;label for="id-red">red&lt;/label>
+                        &lt;label for="id-green">green&lt;/label>
+                        &lt;label for="id-blue">blue&lt;/label>
+                        &lt;label for="id-black">black&lt;/label>
+                    &lt;/div>
+                    &lt;div>
+                        &lt;input id="id-red" name="colors" type="radio" value="red" />
+                        &lt;input id="id-green" name="colors" type="radio" value="green" checked />
+                        &lt;input id="id-blue" name="colors" type="radio" value="blue" />
+                        &lt;input id="id-black" name="colors" type="radio" value="black" disabled />
+                    &lt;/div>
+                    &lt;/form>
+                    &lt;button form="id-radio" type="submit">Submit&lt;/button>
+                    &lt;button form="id-radio" type="reset">Reset&lt;/button>
+                &lt;/section>
+                &lt;section>
+                    &lt;h4>Choose multiple values&lt;/h4>
+                    &lt;form action="javascript:void(0);" id="id-checkbox">
+                    &lt;div>
+                        &lt;label for="red">red&lt;/label>
+                        &lt;label for="green">green&lt;/label>
+                        &lt;label for="blue">blue&lt;/label>
+                        &lt;label for="black">black&lt;/label>
+                    &lt;/div>
+                    &lt;div>
+                        &lt;input id="red" name="colors" type="checkbox" value="red" />
+                        &lt;input id="green" name="colors" type="checkbox" value="green" checked />
+                        &lt;input id="blue" name="colors" type="checkbox" value="blue" />
+                        &lt;input id="black" name="colors" type="checkbox" value="black" disabled />
+                    &lt;/div>
+                &lt;/form>
+                &lt;button form="id-checkbox" type="submit">Submit&lt;/button>
+                &lt;button form="id-checkbox" type="reset">Reset&lt;/button>
+            &lt;/section>
+        &lt;/div>
+    </code></pre>
+    <p>Завдання 6</p>
+    <pre><code>
+        &lt;form action="javascript:void(0);">
+            &lt;select>
+                &lt;optgroup label="Developer">
+                    &lt;option value="frontend">Frontend&lt;/option>
+                &lt;/optgroup>
+                &lt;optgroup label="Base skills">
+                    &lt;option value="html" selected>HTML&lt;/option>
+                    &lt;option value="css">CSS&lt;/option>
+                    &lt;option value="js">JavaScript&lt;/option>
+                &lt;/optgroup>
+                &lt;optgroup label="Frameworks" disabled>
+                    &lt;option value="vue">Vue&lt;/option>
+                    &lt;option value="react">React + GraphQL&lt;/option>
+                    &lt;option value="angular">Angular&lt;/option>
+                &lt;/optgroup>
+            &lt;/select>
+            &lt;button type="submit">Submit&lt;/button>
+            &lt;button type="reset">Reset&lt;/button>
+        &lt;/form>
+    </code></pre>
+    <p>Завдання 7</p>
+    <pre><code>
+        &lt;form action="javascript:void(0);">
+            &lt;label for="myBrowser">Browser selection&lt;/label>
+            &lt;input id="myBrowser" name="myBrowser" list="browsers" />
+            &lt;datalist id="browsers">
+                &lt;option>Chrome&lt;/option>
+                &lt;option>Firefox&lt;/option>
+                &lt;option>Internet Explorer&lt;/option>
+                &lt;option>Opera&lt;/option>
+                &lt;option>Safari&lt;/option>
+                &lt;option>Microsoft Edge&lt;/option>
+            &lt;/datalist>
+        &lt;/form>
+    </code></pre>
+
+    <a href="./module5task2.html">Назад</a>
+    <a href="./module6task2.html">Далі</a>
+  </body>
+</html>
